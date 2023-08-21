@@ -3,7 +3,7 @@ services:
   server:
     build: ./stats-service/
     image: stats_server
-    container_name: stats-service
+    container_name: stats-server
     ports:
       - "9090:9090"
       - "9091:9091"
