@@ -8,6 +8,8 @@ import ru.practicum.dto.StatsDTO;
 import ru.practicum.model.RequestModel;
 import ru.practicum.repository.StatsRepository;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 
@@ -27,9 +29,9 @@ public class StatsServiceImpl {
     public List<StatsDTO> get(String start, String end, List<String> uri, boolean isUnique) {
 
         if (isUnique) {
-            return statsRepository.statisticsUniqueIp(start, end, uri);
+            return statsRepository.statisticsUniqueIp(start,end,uri);
         } else {
-            return statsRepository.statisticsAllIp(start, end, uri);
+            return statsRepository.statisticsAllIp(start,end,uri);
         }
 
     }
