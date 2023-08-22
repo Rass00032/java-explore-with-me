@@ -2,7 +2,7 @@ version: '3.8'
 services:
   server:
     build: ./stats-service/
-    image: stats_server
+    image: stats-server
     container_name: stats-server
     ports:
       - "9090:9090"
