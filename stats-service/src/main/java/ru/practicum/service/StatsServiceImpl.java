@@ -27,9 +27,9 @@ public class StatsServiceImpl {
     public List<StatsDTO> get(String start, String end, List<String> uri, boolean isUnique) {
 
         if (isUnique) {
-            return statsRepository.statisticsUniqueIp(start,end,uri);
+            return statsRepository.statisticsUniqueIp(start, end, uri);
         } else {
-            return statsRepository.statisticsAllIp(start,end,uri);
+            return statsRepository.statisticsAllIp(start, end, uri);
         }
     }
 }

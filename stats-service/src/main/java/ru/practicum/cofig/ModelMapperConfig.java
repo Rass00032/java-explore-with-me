@@ -1,6 +1,8 @@
 package ru.practicum.cofig;
 
-import org.modelmapper.*;
+import org.modelmapper.Converter;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeMap;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.practicum.dto.RequestDto;

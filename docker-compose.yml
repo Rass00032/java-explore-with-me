@@ -14,13 +14,13 @@ services:
       - SPRING_DATASOURCE_USERNAME=myapp
       - SPRING_DATASOURCE_PASSWORD=myapp
       - SPRING_DRIVER_CLASS_NAME=org.postgresql.Driver
+
   db:
     image: postgres:13.7-alpine
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: myapp
-      POSTGRES_USER: myapp
-      POSTGRES_DB: my_db
+    container_name: my_app-db
     ports:
-      - "6432:5432"
-
+      - "6541:5432"
+    environment:
+      - POSTGRES_PASSWORD=myapp
+      - POSTGRES_USER=myapp
+      - POSTGRES_DB=my_db
