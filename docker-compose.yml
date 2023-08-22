@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.8'
 services:
   server:
     build: ./stats-service/
@@ -15,7 +15,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=myapp
       - SPRING_DRIVER_CLASS_NAME=org.postgresql.Driver
   db:
-    image: postgres
+    image: postgres:13.7-alpine
     restart: always
     environment:
       POSTGRES_PASSWORD: myapp
@@ -24,8 +24,3 @@ services:
     ports:
       - "6432:5432"
 
-#  adminer:
-#    image: adminer
-#    restart: always
-#    ports:
-#    - "6060:6060"

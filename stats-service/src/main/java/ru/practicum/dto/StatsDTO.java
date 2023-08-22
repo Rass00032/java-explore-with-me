@@ -1,10 +1,14 @@
 package ru.practicum.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-public interface StatsDTO {
-    String getApp();
+@Data
+@AllArgsConstructor
+public class StatsDTO {
+    private String app;
 
-    String getUri();
+    private String uri;
 
-    Integer getHits();
+    private Long hits;
 }
