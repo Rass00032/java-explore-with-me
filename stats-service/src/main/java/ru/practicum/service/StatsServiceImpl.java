@@ -31,6 +31,5 @@ public class StatsServiceImpl {
         } else {
             return statsRepository.statisticsAllIp(start,end,uri);
         }
-
     }
 }
