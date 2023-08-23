@@ -23,7 +23,7 @@ public class StatsServiceImpl {
     public RequestModel save(RequestDto requestDto) {
         RequestModel requestModel = mapper.map(requestDto, RequestModel.class);
         statsRepository.save(requestModel);
-        log.info("Запрос {} добавлен дата: {}", requestModel.getUri());
+        log.info("Запрос {} добавлен дата: {}", requestModel.getUri(), requestModel.getTimestamp());
         return requestModel;
     }
 

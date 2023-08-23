@@ -13,11 +13,11 @@ import lombok.ToString;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RequestDto {
-    private String app; //"app": "ewm-main-service",
+    private String app;
 
-    private String uri;// "uri": "/events/1",
+    private String uri;
 
-    private String ip; // "ip": "192.163.0.1",
+    private String ip;
 
-    private CharSequence timestamp; // "timestamp": "2022-09-06 11:00:23"
+    private CharSequence timestamp;
 }

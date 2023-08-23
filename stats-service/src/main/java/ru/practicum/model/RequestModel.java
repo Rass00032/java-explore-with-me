@@ -19,16 +19,16 @@ public class RequestModel {
     private long id;
 
     @Column(nullable = false)
-    private String app; //"app": "ewm-main-service",
+    private String app;
 
     @Column(nullable = false)
-    private String uri;// "uri": "/events/1",
+    private String uri;
 
     @Column(nullable = false)
-    private String ip; // "ip": "192.163.0.1",
+    private String ip;
 
     @Column(name = "times", nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime timestamp; // "timestamp": "2022-09-06 11:00:23"
+    private LocalDateTime timestamp;
 }
 
