@@ -30,6 +30,14 @@ public class StatsServiceImpl {
 
     public List<StatsDTO> get(String start, String end, List<String> uri, boolean isUnique) {
         log.info("Получение запросов");
+        if (uri == null) {
+            if (isUnique) {
+                return statsRepository.statisticsUniqueIpNotUri(start, end);
+            } else {
+                return statsRepository.statisticsAllIpNotUri(start, end);
+            }
+        }
+
         if (isUnique) {
             return statsRepository.statisticsUniqueIp(start, end, uri);
         } else {
