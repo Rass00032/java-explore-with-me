@@ -25,12 +25,11 @@ public class StatsController {
     public List<StatsDTO> getStats(@RequestParam String start,
                                    @RequestParam String end,
                                    @RequestParam(required = false) List<String> uris,
-                                   @RequestParam(defaultValue = "false") boolean unique ) {
+                                   @RequestParam(defaultValue = "false") boolean unique) {
         log.info("\nЗапрос:\nstart {}\nend {}\nuri {}\nunique {}", start, end, uris, unique);
 
         return service.get(start, end, uris, unique);
     }
-
 
 
 }
