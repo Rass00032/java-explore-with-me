@@ -1,8 +1,10 @@
 package ru.practicum;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+@Component
 public class StatsClient {
     private final RestTemplate restTemplate = new RestTemplate();
 
