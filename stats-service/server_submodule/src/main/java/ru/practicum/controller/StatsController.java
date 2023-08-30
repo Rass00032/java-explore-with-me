@@ -2,7 +2,6 @@ package ru.practicum.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.dto.RequestDto;
 import ru.practicum.dto.StatsDTO;
@@ -18,7 +17,6 @@ public class StatsController {
     private StatsServiceImpl service;
 
     @PostMapping("/hit")
-    @ResponseStatus(HttpStatus.CREATED)
     public RequestModel creatingStats(@RequestBody RequestDto request) {
         return service.save(request);
     }
