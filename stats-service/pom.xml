@@ -7,12 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.practicum</groupId>
     <artifactId>stats-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>stats-service</name>
 
+    <name>stats-service</name>
     <url>http://maven.apache.org</url>
     <modules>
         <module>server_submodule</module>
@@ -95,6 +93,7 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
 
 
     </dependencies>
